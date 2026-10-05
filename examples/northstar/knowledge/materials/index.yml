@@ -1,0 +1,22 @@
+# Step 1 of the guide. Northstar Dispatch material the AI agent can send as a tracked short link.
+# Pick by the lead's industry or system. Case studies are pages on the site; the one-pagers are also in this folder as markdown.
+- id: cs-hvac-dispatch-board
+  title: "Case study: an HVAC company moves its dispatch board off a spreadsheet"
+  audience: "HVAC"
+  url: "https://northstardispatch.example/case-studies/hvac-dispatch-board"
+- id: cs-plumbing-routes
+  title: "Case study: a plumbing company plans its routes with Fleet"
+  audience: "plumbing"
+  url: "https://northstardispatch.example/case-studies/plumbing-routes"
+- id: cs-electrical-quickbooks
+  title: "Case study: an electrical contractor connects dispatch to QuickBooks Online"
+  audience: "electrical, QuickBooks Online"
+  url: "https://northstardispatch.example/case-studies/electrical-quickbooks"
+- id: op-field-service-overview
+  title: "One-pager: Northstar Dispatch for field-service companies"
+  audience: "HVAC, plumbing, electrical, appliance repair"
+  url: "https://northstardispatch.example/one-pagers/field-service-overview"
+- id: op-quickbooks-sync
+  title: "One-pager: Dispatch with QuickBooks Online"
+  audience: "QuickBooks Online"
+  url: "https://northstardispatch.example/one-pagers/quickbooks-sync"

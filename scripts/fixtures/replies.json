@@ -1,0 +1,173 @@
+{
+  "_about": "Replies as the adapters return them (sources: smartlead, explee, mailbox). Built from the reply notes of the example cards, plus three extras: a reply with no card, a reply from a second address with no note, and a bounce notice. \"mailbox_messages\" is mail in both directions, used by the one-rule check; the AI agent emails match the \"sent\" notes on the cards by recipient and time.",
+  "replies": [
+    {
+      "id": "sl-101",
+      "source": "smartlead",
+      "campaign": "US-HVAC-2026-03",
+      "from_email": "marcus.bell@blueridgehvac.example",
+      "from_name": "Marcus Bell",
+      "subject": "Re: dispatch for your HVAC crews",
+      "body": "Hi Sam,\n\nThanks for reaching out. Our dispatchers run the day from a shared Google Sheet and a whiteboard, and the techs in the trucks call in all day to ask what is next. Overtime got out of hand this winter. Does this sync with QuickBooks? We are on QuickBooks Online.\n\nMarcus",
+      "received_at": "2026-03-04T13:45:00Z"
+    },
+    {
+      "id": "sl-201",
+      "source": "smartlead",
+      "campaign": "US-PLUMBING-2026-03",
+      "from_email": "tom@harborplumbing.example",
+      "from_name": "Tom Lindqvist",
+      "subject": "Re: dispatch for your plumbing crews",
+      "body": "Hi Sam,\n\nWhat does it cost? We have 18 trucks and two people in the office doing dispatch, and I need a number before I look at anything else.\n\nTom",
+      "received_at": "2026-03-05T16:24:00Z"
+    },
+    {
+      "id": "sl-301",
+      "source": "smartlead",
+      "campaign": "CA-ELECTRIC-2026-03",
+      "from_email": "grace.tran@mapleelectric.example",
+      "from_name": "Grace Tran",
+      "subject": "Re: dispatch for electrical crews",
+      "body": "Hi Sam,\n\nWe dispatch 65 electricians across the GTA from Google Calendar and it is a mess. Do you have anything for electrical contractors? And how does the QuickBooks part work?\n\nGrace",
+      "received_at": "2026-03-03T15:16:00Z"
+    },
+    {
+      "id": "mb-401",
+      "source": "mailbox",
+      "campaign": "",
+      "from_email": "rosa.delgado@sunbeltrepair.example",
+      "from_name": "Rosa Delgado",
+      "subject": "Re: Your Northstar Dispatch trial",
+      "body": "Hi Dana,\n\nWe run about 120 technicians out of Phoenix and Tucson. The first thing to fix is reassigning jobs when a tech runs over, because our dispatchers do it by phone and overtime is the result. We are on QuickBooks Online. I decide this together with our COO, Mark Pierce.\n\nRosa",
+      "received_at": "2026-03-03T18:18:00Z"
+    },
+    {
+      "id": "sl-501",
+      "source": "smartlead",
+      "campaign": "US-HVAC-2026-03",
+      "from_email": "pete.ostrander@northwindmech.example",
+      "from_name": "Pete Ostrander",
+      "subject": "Re: dispatch for your crews",
+      "body": "Hi Sam,\n\nWe run 30 technicians out of Minneapolis on QuickBooks Online. Our bookkeeper spends two days a month re-keying completed jobs into it. Does Northstar sync with QuickBooks, and what does it cost for 30 techs?\n\nPete",
+      "received_at": "2026-03-03T14:38:00Z"
+    },
+    {
+      "id": "sl-502",
+      "source": "smartlead",
+      "campaign": "US-HVAC-2026-03",
+      "from_email": "pete.ostrander@northwindmech.example",
+      "from_name": "Pete Ostrander",
+      "subject": "Re: dispatch for your crews",
+      "body": "Hi Sam,\n\nI read the one-pager. We have 3 dispatchers. I decide together with our controller. Can we talk?\n\nPete",
+      "received_at": "2026-03-04T13:08:00Z"
+    },
+    {
+      "id": "sl-601",
+      "source": "smartlead",
+      "campaign": "CA-HEATING-2026-03",
+      "from_email": "janelle@prairiecomfort.example",
+      "from_name": "Janelle Brandt",
+      "subject": "Re: dispatch for your heating crews",
+      "body": "Hi Sam,\n\nNot now. We renewed our dispatch software in February and the contract runs through the end of May. Write me again in June.\n\nJanelle",
+      "received_at": "2026-03-04T17:13:00Z"
+    },
+    {
+      "id": "sl-701",
+      "source": "smartlead",
+      "campaign": "US-HVAC-2026-03",
+      "from_email": "bill@cedarvalleyservices.example",
+      "from_name": "Bill Hartnett",
+      "subject": "Re: dispatch for your crews",
+      "body": "Hi Sam,\n\nLooks interesting. It is me, my wife and nine techs. What does it cost?\n\nBill",
+      "received_at": "2026-03-05T20:00:00Z"
+    },
+    {
+      "id": "sl-801",
+      "source": "smartlead",
+      "campaign": "US-ELECTRIC-2026-03",
+      "from_email": "lisa.moreau@granitestateelectric.example",
+      "from_name": "Lisa Moreau",
+      "subject": "Re: dispatch for your electrical crews",
+      "body": "Hi Sam,\n\nThanks for the note. Not sure it is for us yet, but happy to hear more. What does it cost?\n\nLisa",
+      "received_at": "2026-03-05T14:10:00Z"
+    },
+    {
+      "id": "sl-901",
+      "source": "smartlead",
+      "campaign": "US-HVAC-2026-03",
+      "from_email": "denise.whitfield@gulfcoastcooling.example",
+      "from_name": "Denise Whitfield",
+      "subject": "Re: dispatch for your HVAC crews",
+      "body": "Hi Sam,\n\nRick asked me to get the details after his call with Dana last week. Can you send the pricing and the QuickBooks information? Thanks.\n\nDenise",
+      "received_at": "2026-03-10T17:42:00Z"
+    },
+    {
+      "id": "sl-9001",
+      "source": "smartlead",
+      "campaign": "US-HVAC-2026-03",
+      "from_email": "owner@lakeshorehvac.example",
+      "from_name": "Owner",
+      "subject": "Re: Dispatch scheduling for Lakeshore HVAC",
+      "body": "Interested. What does it cost for 22 technicians?",
+      "received_at": "2026-03-12T12:20:00Z"
+    },
+    {
+      "id": "sl-9002",
+      "source": "smartlead",
+      "campaign": "US-HVAC-2026-03",
+      "from_email": "accounts@northwindmech.example",
+      "from_name": "Accounts",
+      "subject": "Re: Dispatch scheduling for Northwind Mechanical",
+      "body": "Who should I talk to about the invoice for the trial? Pete said you are the right place.",
+      "received_at": "2026-03-12T13:40:00Z"
+    },
+    {
+      "id": "sl-9003",
+      "source": "smartlead",
+      "campaign": "US-HVAC-2026-03",
+      "from_email": "mailer-daemon@mail.example",
+      "from_name": "Mail Delivery Subsystem",
+      "subject": "Delivery Status Notification (Failure)",
+      "body": "The address you sent to was not found.",
+      "received_at": "2026-03-10T09:00:00Z"
+    }
+  ],
+  "mailbox_messages": [
+    {
+      "message_id": "<m-9001@mail.example>",
+      "direction": "sent",
+      "from_email": "dana@northstardispatch.example",
+      "from_name": "Dana Reyes",
+      "to_emails": [
+        "rosa.delgado@sunbeltrepair.example"
+      ],
+      "subject": "Your Northstar Dispatch trial",
+      "body": "(the email as written on the card)",
+      "date": "2026-03-02T16:46:00Z"
+    },
+    {
+      "message_id": "<m-9002@mail.example>",
+      "direction": "sent",
+      "from_email": "dana@northstardispatch.example",
+      "from_name": "Dana Reyes",
+      "to_emails": [
+        "rosa.delgado@sunbeltrepair.example"
+      ],
+      "subject": "Re: Your Northstar Dispatch trial",
+      "body": "(the email as written on the card)",
+      "date": "2026-03-03T18:51:00Z"
+    },
+    {
+      "message_id": "<m-8001@mail.example>",
+      "direction": "sent",
+      "from_email": "dana@northstardispatch.example",
+      "from_name": "Dana Reyes",
+      "to_emails": [
+        "rick.tomlin@gulfcoastcooling.example"
+      ],
+      "subject": "Following up on our call",
+      "body": "Rick, thanks for the time today. I will send the Fleet details and a QuickBooks overview.",
+      "date": "2026-03-06T20:20:00Z"
+    }
+  ]
+}

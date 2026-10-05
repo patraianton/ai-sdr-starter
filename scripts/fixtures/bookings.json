@@ -1,0 +1,38 @@
+{
+  "_about": "Calendly bookings in the shape calendly.mjs returns. The Gulf Coast Cooling call was booked by a colleague before the AI agent ever wrote, so it never counts in the report.",
+  "bookings": [
+    {
+      "id": "evt-sunbelt:rosa.delgado@sunbeltrepair.example",
+      "invitee_email": "rosa.delgado@sunbeltrepair.example",
+      "invitee_name": "Rosa Delgado",
+      "event_name": "Intro call",
+      "start_time": "2026-03-10T18:00:00Z",
+      "end_time": "2026-03-10T18:30:00Z",
+      "created_at": "2026-03-04T13:15:00Z",
+      "host_email": "dana@northstardispatch.example",
+      "host_name": "Dana Reyes"
+    },
+    {
+      "id": "evt-northwind:pete.ostrander@northwindmech.example",
+      "invitee_email": "pete.ostrander@northwindmech.example",
+      "invitee_name": "Pete Ostrander",
+      "event_name": "Intro call",
+      "start_time": "2026-03-09T15:00:00Z",
+      "end_time": "2026-03-09T15:30:00Z",
+      "created_at": "2026-03-04T16:40:00Z",
+      "host_email": "dana@northstardispatch.example",
+      "host_name": "Dana Reyes"
+    },
+    {
+      "id": "evt-gulf:rick.tomlin@gulfcoastcooling.example",
+      "invitee_email": "rick.tomlin@gulfcoastcooling.example",
+      "invitee_name": "Rick Tomlin",
+      "event_name": "Call with Dana",
+      "start_time": "2026-03-06T19:00:00Z",
+      "end_time": "2026-03-06T19:30:00Z",
+      "created_at": "2026-02-27T14:00:00Z",
+      "host_email": "dana@northstardispatch.example",
+      "host_name": "Dana Reyes"
+    }
+  ]
+}

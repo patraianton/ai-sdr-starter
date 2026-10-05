@@ -1,0 +1,18 @@
+# Secrets: keys live in .env on the computer or server where the AI agent runs, never in git.
+.env
+
+# The stop switch. While this file exists next to CLAUDE.md, sending is on. It is local state, not code.
+SENDING_ON
+
+# Alarms from the daily check are local files you read when you open the window.
+alarms/*.md
+
+# Run logs and reports.
+runs/*
+!runs/.gitkeep
+
+node_modules/
+.DS_Store
+
+# The local list of words that must never appear in a copy of this template. Never commit it.
+scripts/.forbidden.local.txt

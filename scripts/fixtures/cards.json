@@ -1,0 +1,391 @@
+{
+  "_about": "The nine example cards (examples/northstar/cards/) in the shape the GitHub API returns, parsed by scripts/lib/match.mjs. \"now\" is the clock a dry run uses. \"report_since\" is where the dry-run report starts counting. \"repo_labels\" is what a new repository holds before board-labels.mjs runs.",
+  "now": "2026-03-12T15:00:00Z",
+  "report_since": "2026-03-02",
+  "repo_labels": [
+    {
+      "name": "bug",
+      "color": "d73a4a",
+      "description": "Something isn't working"
+    },
+    {
+      "name": "documentation",
+      "color": "0075ca",
+      "description": "Improvements or additions to documentation"
+    },
+    {
+      "name": "enhancement",
+      "color": "a2eeef",
+      "description": "New feature or request"
+    },
+    {
+      "name": "question",
+      "color": "d876e3",
+      "description": "Further information is requested"
+    },
+    {
+      "name": "Booked",
+      "color": "ededed",
+      "description": ""
+    },
+    {
+      "name": "Parked",
+      "color": "BFD4F2",
+      "description": "The lead said not now, with a date. The AI agent comes back on that date."
+    }
+  ],
+  "cards": [
+    {
+      "number": 1,
+      "title": "Blue Ridge HVAC (blueridgehvac.example)",
+      "state": "open",
+      "labels": [
+        "New reply"
+      ],
+      "url": "https://github.com/example-owner/ai-sdr-starter/issues/1",
+      "body": "| Field | Value |\n|---|---|\n| Company | Blue Ridge HVAC |\n| Domain | blueridgehvac.example |\n| Contacts | Marcus Bell, marcus.bell@blueridgehvac.example, Operations Manager |\n| Size | 42 technicians (Apollo and their site) |\n| Industry | HVAC |\n| Country | United States (Asheville, NC) |\n| Source | Campaign US-HVAC-2026-03 (Smartlead), step 1 sent 2026-03-02 |\n| CRM record | https://app.hubspot.com/contacts/10000001/company/20481 |\n| Setup | 1 |\n\n---\n\n**2026-03-04 08:47 · AI agent · reply**\nFrom: marcus.bell@blueridgehvac.example\nSubject: Re: dispatch for your HVAC crews\nThread: Smartlead campaign \"US-HVAC-2026-03\", step 1 sent 2026-03-02 10:05\n\n> Hi Sam,\n>\n> Thanks for reaching out. Our dispatchers run the day from a shared Google Sheet and a whiteboard, and the techs in the trucks call in all day to ask what is next. Overtime got out of hand this winter. Does this sync with QuickBooks? We are on QuickBooks Online.\n>\n> Marcus",
+      "comments": [
+        {
+          "created_at": "2026-03-04T14:12:00Z",
+          "body": "**2026-03-04 09:12 · AI agent · found-out**\nCustomer check (CRM, by domain): not a customer, no open deal. No HubSpot record, so the lead was created before the AI agent's first email (linked in the header)\nOur person in the thread (CRM, mailbox, calendar, card): none found (no email from Dana or Sam to the domain in the last 90 days, no person's note on this card)\nBooking on the calendar: none (checked in Calendly by email, domain and company name)\nCompany (Apollo): 58 employees, 42 technicians on their site, HVAC, Asheville, NC, United States\nVerdict: fits (42 technicians, above the floor of 15). Task: dispatch runs from a Google Sheet and a whiteboard, overtime is high. Decision maker: not known yet. Answer the QuickBooks question, then ask who decides."
+        },
+        {
+          "created_at": "2026-03-04T14:13:00Z",
+          "body": "**2026-03-04 09:13 · AI agent · next-step**\nDo: write the draft: answer the QuickBooks question (sync is part of Fleet and works with QuickBooks Online), promise nothing about overtime, ask who decides\nOn: none\nOwner: AI agent\nWhy: the booking link goes out only after the three qualification answers are on the card (03-icp-and-qualification.md). The facts come from have-and-do-not-have.md and plans-and-prices.md."
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Harbor Plumbing Co. (harborplumbing.example)",
+      "state": "open",
+      "labels": [
+        "Draft ready"
+      ],
+      "url": "https://github.com/example-owner/ai-sdr-starter/issues/2",
+      "body": "| Field | Value |\n|---|---|\n| Company | Harbor Plumbing Co. |\n| Domain | harborplumbing.example |\n| Contacts | Tom Lindqvist, tom@harborplumbing.example, Owner |\n| Size | 18 technicians (Apollo and their site) |\n| Industry | Plumbing |\n| Country | United States (Seattle, WA) |\n| Source | Campaign US-PLUMBING-2026-03 (Smartlead), step 1 sent 2026-03-03 |\n| CRM record | https://app.hubspot.com/contacts/10000001/company/20377 |\n| Setup | 1 |\n\n---\n\n**2026-03-05 11:26 · AI agent · reply**\nFrom: tom@harborplumbing.example\nSubject: Re: dispatch for your plumbing crews\nThread: Smartlead campaign \"US-PLUMBING-2026-03\", step 1 sent 2026-03-03 10:02\n\n> Hi Sam,\n>\n> What does it cost? We have 18 trucks and two people in the office doing dispatch, and I need a number before I look at anything else.\n>\n> Tom",
+      "comments": [
+        {
+          "created_at": "2026-03-05T16:31:00Z",
+          "body": "**2026-03-05 11:31 · AI agent · found-out**\nCustomer check (CRM, by domain): not a customer, no closed-won deal. The company already exists in HubSpot as a lead that Sam created on 2026-02-20, no deal (linked in the header)\nOur person in the thread (CRM, mailbox, calendar, card): none found (no open deal, no email from Dana or Sam to the domain in the last 90 days, no person's note on this card)\nBooking on the calendar: none\nCompany (Apollo): 24 employees, 18 technicians on their site, plumbing, Seattle, WA, United States\nVerdict: fits (18 technicians, above the floor of 15). Tom is the owner and wrote himself. Task and accounting system: not known yet. Price question, so the draft uses the public price page (04-how-to-write.md). Crew stops at 10 technicians, so Fleet is the plan that fits."
+        },
+        {
+          "created_at": "2026-03-05T16:38:00Z",
+          "body": "**2026-03-05 11:38 · AI agent · draft**\nTo: tom@harborplumbing.example\nSubject: Re: dispatch for your plumbing crews\nWaits for: Sam Okafor (stage 1)\nMaterial: none\n\n> Hi Tom,\n>\n> Prices are on this page: https://northstardispatch.example/pricing\n>\n> With 18 technicians you would be on Fleet, because Crew stops at 10 technicians. Fleet is $149 per dispatcher per month, and you mentioned two dispatchers. It includes route optimization and QuickBooks sync. The trial is 14 days and needs no card.\n>\n> So I can point you to the right setup: what slows your two dispatchers down most today, and which accounting system do you use?\n>\n> Sam"
+        },
+        {
+          "created_at": "2026-03-05T16:38:00Z",
+          "body": "**2026-03-05 11:38 · AI agent · next-step**\nDo: send the draft once Sam Okafor approves it\nOn: none\nOwner: Sam Okafor\nWhy: approval stage 1: every email waits for the approver. The label is Draft ready and nothing is sent. If the draft is not approved by the end of 2026-03-06, the daily check raises an alarm naming Sam."
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Maple Electric Ltd. (mapleelectric.example)",
+      "state": "open",
+      "labels": [
+        "Sent, waiting"
+      ],
+      "url": "https://github.com/example-owner/ai-sdr-starter/issues/3",
+      "body": "| Field | Value |\n|---|---|\n| Company | Maple Electric Ltd. |\n| Domain | mapleelectric.example |\n| Contacts | Grace Tran, grace.tran@mapleelectric.example, Dispatch Manager |\n| Size | 65 technicians (Grace's reply; Apollo says 90 employees) |\n| Industry | Electrical |\n| Country | Canada (Toronto, ON) |\n| Source | Campaign CA-ELECTRIC-2026-03 (Smartlead), step 1 sent 2026-03-02 |\n| CRM record | https://app.hubspot.com/contacts/10000001/company/20412 |\n| Setup | 1 |\n\n---\n\n**2026-03-03 10:18 · AI agent · reply**\nFrom: grace.tran@mapleelectric.example\nSubject: Re: dispatch for electrical crews\nThread: Smartlead campaign \"CA-ELECTRIC-2026-03\", step 1 sent 2026-03-02 10:08\n\n> Hi Sam,\n>\n> We dispatch 65 electricians across the GTA from Google Calendar and it is a mess. Do you have anything for electrical contractors? And how does the QuickBooks part work?\n>\n> Grace",
+      "comments": [
+        {
+          "created_at": "2026-03-03T15:24:00Z",
+          "body": "**2026-03-03 10:24 · AI agent · found-out**\nCustomer check (CRM, by domain): not a customer, no closed-won deal. No HubSpot record, so the lead was created (linked in the header)\nOur person in the thread (CRM, mailbox, calendar, card): none found (none in the last 90 days, no person's note on this card)\nBooking on the calendar: none\nCompany (Apollo): 90 employees, 65 electricians by Grace's own words, electrical, Toronto, ON, Canada\nVerdict: fits (65 technicians, above the floor of 15). Task: dispatch from Google Calendar. Answer both questions. Material: case study cs-electrical-quickbooks matches both (electrical, QuickBooks Online)."
+        },
+        {
+          "created_at": "2026-03-03T15:31:00Z",
+          "body": "**2026-03-03 10:31 · AI agent · draft**\nTo: grace.tran@mapleelectric.example\nSubject: Re: dispatch for electrical crews\nWaits for: Sam Okafor (stage 1)\nMaterial: cs-electrical-quickbooks / https://go.northstardispatch.example/me-cs1 / lnk_7Hq2Xm\n\n> Hi Grace,\n>\n> Yes. This case study is about an electrical contractor that connects dispatch to QuickBooks Online: https://go.northstardispatch.example/me-cs1\n>\n> QuickBooks sync is part of our Fleet plan. Northstar also connects to Google Calendar.\n>\n> Are you on QuickBooks Online, and who else would look at this with you?\n>\n> Sam"
+        },
+        {
+          "created_at": "2026-03-03T19:20:00Z",
+          "body": "approved",
+          "user": {
+            "login": "sokafor-ns"
+          }
+        },
+        {
+          "created_at": "2026-03-03T19:21:00Z",
+          "body": "**2026-03-03 14:21 · AI agent · sent**\nFrom: sam.okafor@getnorthstar.example\nTo: grace.tran@mapleelectric.example\nSubject: Re: dispatch for electrical crews\nApproved by: Sam Okafor, 2026-03-03 14:20\nFollow-up due: 2026-03-06\nMaterial: cs-electrical-quickbooks / https://go.northstardispatch.example/me-cs1 / lnk_7Hq2Xm\n\n> Hi Grace,\n>\n> Yes. This case study is about an electrical contractor that connects dispatch to QuickBooks Online: https://go.northstardispatch.example/me-cs1\n>\n> QuickBooks sync is part of our Fleet plan. Northstar also connects to Google Calendar.\n>\n> Are you on QuickBooks Online, and who else would look at this with you?\n>\n> Sam"
+        },
+        {
+          "created_at": "2026-03-04T20:52:00Z",
+          "body": "**2026-03-04 15:52 · AI agent · link-opened**\nMaterial: cs-electrical-quickbooks / https://go.northstardispatch.example/me-cs1 / lnk_7Hq2Xm\nFirst opened: 2026-03-04 15:52 (the run that saw the click; the service gives no click time)\nNext: a message is written now, not on the follow-up schedule. Our last email is 25 hours old (05-follow-ups-and-stop.md)."
+        },
+        {
+          "created_at": "2026-03-04T21:05:00Z",
+          "body": "**2026-03-04 16:05 · AI agent · draft**\nTo: grace.tran@mapleelectric.example\nSubject: Re: dispatch for electrical crews\nWaits for: Sam Okafor (stage 1)\nMaterial: none\n\n> Hi Grace,\n>\n> One more thing from the case study I sent: Fleet includes route optimization, along with the QuickBooks sync.\n>\n> When one job runs long on a day with 65 electricians out, how do your dispatchers move the rest of the day today? Calls, texts or the calendar?\n>\n> Sam"
+        },
+        {
+          "created_at": "2026-03-04T21:08:00Z",
+          "body": "approved",
+          "user": {
+            "login": "sokafor-ns"
+          }
+        },
+        {
+          "created_at": "2026-03-04T21:10:00Z",
+          "body": "**2026-03-04 16:10 · AI agent · sent**\nFrom: sam.okafor@getnorthstar.example\nTo: grace.tran@mapleelectric.example\nSubject: Re: dispatch for electrical crews\nApproved by: Sam Okafor, 2026-03-04 16:08\nFollow-up due: 2026-03-11\nMaterial: none\n\n> Hi Grace,\n>\n> One more thing from the case study I sent: Fleet includes route optimization, along with the QuickBooks sync.\n>\n> When one job runs long on a day with 65 electricians out, how do your dispatchers move the rest of the day today? Calls, texts or the calendar?\n>\n> Sam"
+        },
+        {
+          "created_at": "2026-03-04T21:11:00Z",
+          "body": "**2026-03-04 16:11 · AI agent · next-step**\nDo: send follow-up 2 on 2026-03-11, and then end the sequence\nOn: none\nOwner: AI agent\nWhy: follow_up_days is [3, 7], so the gap after this email is 7 days. This is the second email in a row with no reply, and the limit is 3 (the first email counts). Each follow-up adds something new, and a reply, a booking, a refusal or our person in the thread ends the sequence earlier. The checks run again before follow-up 2. Label stays Sent, waiting."
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Sunbelt Appliance Repair (sunbeltrepair.example)",
+      "state": "open",
+      "labels": [
+        "Booked"
+      ],
+      "url": "https://github.com/example-owner/ai-sdr-starter/issues/4",
+      "body": "| Field | Value |\n|---|---|\n| Company | Sunbelt Appliance Repair |\n| Domain | sunbeltrepair.example |\n| Contacts | Rosa Delgado, rosa.delgado@sunbeltrepair.example, Operations Director<br>Mark Pierce, mark.pierce@sunbeltrepair.example, COO |\n| Size | 120 technicians (Apollo and their site) |\n| Industry | Appliance repair |\n| Country | United States (Phoenix, AZ, and Tucson, AZ) |\n| Source | Trial sign-up 2026-03-02 (webhook from the product) |\n| CRM record | https://app.hubspot.com/contacts/10000001/company/20455 |\n| Setup | 3 |\n\n---\n\n**2026-03-02 10:41 · AI agent · found-out**\nCustomer check (CRM, by domain): not a customer, no closed-won deal. No HubSpot record, so the lead was created before the first email (linked in the header)\nOur person in the thread (CRM, mailbox, calendar, card): none found (none in the last 90 days, no person's note on this card)\nBooking on the calendar: none\nCompany (Apollo): 140 employees, 120 technicians on their site, appliance repair, Phoenix, AZ, United States\nVerdict: fits so far (120 technicians). Trial sign-up by webhook from rosa.delgado@sunbeltrepair.example: a business domain, not free-mail, not a test account. Accounting system, task and decision maker are not known yet, so the first email asks about size and task.",
+      "comments": [
+        {
+          "created_at": "2026-03-02T16:30:00Z",
+          "body": "**2026-03-02 11:30 · AI agent · draft**\nTo: rosa.delgado@sunbeltrepair.example\nSubject: Your Northstar Dispatch trial\nWaits for: Sam Okafor (stage 1)\nMaterial: none\n\n> Hi Rosa,\n>\n> I saw that Sunbelt Appliance Repair started a trial of Northstar Dispatch. I am Dana from the team.\n>\n> Two questions so I can point you to the right place: roughly how many technicians do you dispatch, and what are you hoping the dispatch board will fix first?\n>\n> Dana"
+        },
+        {
+          "created_at": "2026-03-02T16:45:00Z",
+          "body": "approved",
+          "user": {
+            "login": "sokafor-ns"
+          }
+        },
+        {
+          "created_at": "2026-03-02T16:46:00Z",
+          "body": "**2026-03-02 11:46 · AI agent · sent**\nFrom: dana@northstardispatch.example (sent by the AI agent, not by Dana)\nTo: rosa.delgado@sunbeltrepair.example\nSubject: Your Northstar Dispatch trial\nApproved by: Sam Okafor, 2026-03-02 11:45\nFollow-up due: 2026-03-05\nMaterial: none\n\n> Hi Rosa,\n>\n> I saw that Sunbelt Appliance Repair started a trial of Northstar Dispatch. I am Dana from the team.\n>\n> Two questions so I can point you to the right place: roughly how many technicians do you dispatch, and what are you hoping the dispatch board will fix first?\n>\n> Dana"
+        },
+        {
+          "created_at": "2026-03-03T18:20:00Z",
+          "body": "**2026-03-03 13:20 · AI agent · reply**\nFrom: rosa.delgado@sunbeltrepair.example\nSubject: Re: Your Northstar Dispatch trial\nThread: mailbox of dana@northstardispatch.example, thread started 2026-03-02 11:46\n\n> Hi Dana,\n>\n> We run about 120 technicians out of Phoenix and Tucson. The first thing to fix is reassigning jobs when a tech runs over, because our dispatchers do it by phone and overtime is the result. We are on QuickBooks Online. I decide this together with our COO, Mark Pierce.\n>\n> Rosa"
+        },
+        {
+          "created_at": "2026-03-03T18:28:00Z",
+          "body": "**2026-03-03 13:28 · AI agent · found-out**\nCustomer check (CRM, by domain): not a customer (checked again before writing)\nOur person in the thread (CRM, mailbox, calendar, card): none found. Dana's mailbox shows only the AI agent's own email of 2026-03-02, which does not count as Dana talking\nBooking on the calendar: none\nCompany (Apollo): 140 employees, 120 technicians (Rosa confirms), appliance repair\nVerdict: fits, and all three qualification answers are on the card. Fit: 120 technicians, QuickBooks Online. Task: reassigning jobs by phone when a technician runs over, overtime is the result. Decision maker: Rosa Delgado and Mark Pierce, COO. The booking link goes in this email."
+        },
+        {
+          "created_at": "2026-03-03T18:35:00Z",
+          "body": "**2026-03-03 13:35 · AI agent · draft**\nTo: rosa.delgado@sunbeltrepair.example\nSubject: Re: Your Northstar Dispatch trial\nWaits for: Sam Okafor (stage 1)\nMaterial: none\n\n> Hi Rosa,\n>\n> Thanks, that is clear. With 120 technicians you would be on Fleet, because Crew stops at 10 technicians. Fleet includes route optimization and QuickBooks sync.\n>\n> On a call I can walk through reassigning jobs on a real day, with you and Mark. Pick a time here: https://calendly.com/northstar-dispatch/intro-call\n>\n> Dana"
+        },
+        {
+          "created_at": "2026-03-03T18:50:00Z",
+          "body": "approved",
+          "user": {
+            "login": "sokafor-ns"
+          }
+        },
+        {
+          "created_at": "2026-03-03T18:51:00Z",
+          "body": "**2026-03-03 13:51 · AI agent · sent**\nFrom: dana@northstardispatch.example (sent by the AI agent, not by Dana)\nTo: rosa.delgado@sunbeltrepair.example\nSubject: Re: Your Northstar Dispatch trial\nApproved by: Sam Okafor, 2026-03-03 13:50\nFollow-up due: 2026-03-06\nMaterial: none\n\n> Hi Rosa,\n>\n> Thanks, that is clear. With 120 technicians you would be on Fleet, because Crew stops at 10 technicians. Fleet includes route optimization and QuickBooks sync.\n>\n> On a call I can walk through reassigning jobs on a real day, with you and Mark. Pick a time here: https://calendly.com/northstar-dispatch/intro-call\n>\n> Dana"
+        },
+        {
+          "created_at": "2026-03-04T13:20:00Z",
+          "body": "**2026-03-04 08:20 · AI agent · booking**\nMeeting: 2026-03-10 11:00 (America/Phoenix, which is 14:00 Eastern), 30 minutes, with Dana Reyes\nInvitee: rosa.delgado@sunbeltrepair.example (guests: Rosa Delgado, Mark Pierce)\nMatched by: email, and company domain\nCreated after the AI agent's first email to this company: yes (booking created 2026-03-04 08:15, first sent 2026-03-02)\nQualification answers: fit: 120 technicians, QuickBooks Online; task: reassigning jobs by phone when a technician runs over; decision maker: Rosa Delgado and Mark Pierce, COO"
+        },
+        {
+          "created_at": "2026-03-04T13:22:00Z",
+          "body": "**2026-03-04 08:22 · AI agent · handover**\nTo: Dana Reyes\nNeeds: host the intro call on 2026-03-10 at 11:00 America/Phoenix. Read the card first: 120 technicians in Phoenix and Tucson, QuickBooks Online, Rosa and Mark Pierce decide together. The AI agent told them Fleet fits 120 technicians, with route optimization and QuickBooks sync, and promised nothing about overtime.\nBecause: a booked call is a person's work. Follow-ups are stopped and the AI agent sends nothing more to this company. Label set to Booked.\nLead's last message: Rosa Delgado, 2026-03-03 13:20: reassigning jobs by phone when a technician runs over is the first thing to fix"
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Northwind Mechanical (northwindmech.example)",
+      "state": "open",
+      "labels": [
+        "Call held"
+      ],
+      "url": "https://github.com/example-owner/ai-sdr-starter/issues/5",
+      "body": "| Field | Value |\n|---|---|\n| Company | Northwind Mechanical |\n| Domain | northwindmech.example |\n| Contacts | Pete Ostrander, pete.ostrander@northwindmech.example, Operations Manager |\n| Size | 30 technicians (Pete's reply; Apollo says 41 employees) |\n| Industry | HVAC and mechanical contracting |\n| Country | United States (Minneapolis, MN) |\n| Source | Campaign US-HVAC-2026-03 (Smartlead), step 1 sent 2026-03-02 |\n| CRM record | https://app.hubspot.com/contacts/10000001/company/20390 |\n| Setup | 1 |\n\n---\n\n**2026-03-03 09:40 · AI agent · reply**\nFrom: pete.ostrander@northwindmech.example\nSubject: Re: dispatch for your crews\nThread: Smartlead campaign \"US-HVAC-2026-03\", step 1 sent 2026-03-02 10:12\n\n> Hi Sam,\n>\n> We run 30 technicians out of Minneapolis on QuickBooks Online. Our bookkeeper spends two days a month re-keying completed jobs into it. Does Northstar sync with QuickBooks, and what does it cost for 30 techs?\n>\n> Pete",
+      "comments": [
+        {
+          "created_at": "2026-03-03T14:47:00Z",
+          "body": "**2026-03-03 09:47 · AI agent · found-out**\nCustomer check (CRM, by domain): not a customer, no closed-won deal. No HubSpot record, so the lead was created (linked in the header)\nOur person in the thread (CRM, mailbox, calendar, card): none found (none in the last 90 days, no person's note on this card)\nBooking on the calendar: none\nCompany (Apollo): 41 employees, 30 technicians by Pete's own words, HVAC and mechanical contracting, Minneapolis, MN, United States\nVerdict: fits (30 technicians, QuickBooks Online). Task: the bookkeeper re-keys completed jobs for two days a month. Decision maker: not known yet. Material: one-pager op-quickbooks-sync matches the question."
+        },
+        {
+          "created_at": "2026-03-03T15:05:00Z",
+          "body": "**2026-03-03 10:05 · AI agent · draft**\nTo: pete.ostrander@northwindmech.example\nSubject: Re: dispatch for your crews\nWaits for: Sam Okafor (stage 1)\nMaterial: op-quickbooks-sync / https://go.northstardispatch.example/nw-qb1 / lnk_4Tr9Bd\n\n> Hi Pete,\n>\n> Yes. QuickBooks sync is part of our Fleet plan and works with QuickBooks Online. This one-pager covers it: https://go.northstardispatch.example/nw-qb1\n>\n> Fleet is $149 per dispatcher per month, with unlimited technicians. Full prices are here: https://northstardispatch.example/pricing\n>\n> How many dispatchers would use it, and who decides on a change like this?\n>\n> Sam"
+        },
+        {
+          "created_at": "2026-03-03T15:20:00Z",
+          "body": "approved",
+          "user": {
+            "login": "sokafor-ns"
+          }
+        },
+        {
+          "created_at": "2026-03-03T15:21:00Z",
+          "body": "**2026-03-03 10:21 · AI agent · sent**\nFrom: sam.okafor@getnorthstar.example\nTo: pete.ostrander@northwindmech.example\nSubject: Re: dispatch for your crews\nApproved by: Sam Okafor, 2026-03-03 10:20\nFollow-up due: 2026-03-06\nMaterial: op-quickbooks-sync / https://go.northstardispatch.example/nw-qb1 / lnk_4Tr9Bd\n\n> Hi Pete,\n>\n> Yes. QuickBooks sync is part of our Fleet plan and works with QuickBooks Online. This one-pager covers it: https://go.northstardispatch.example/nw-qb1\n>\n> Fleet is $149 per dispatcher per month, with unlimited technicians. Full prices are here: https://northstardispatch.example/pricing\n>\n> How many dispatchers would use it, and who decides on a change like this?\n>\n> Sam"
+        },
+        {
+          "created_at": "2026-03-03T19:15:00Z",
+          "body": "**2026-03-03 14:15 · AI agent · link-opened**\nMaterial: op-quickbooks-sync / https://go.northstardispatch.example/nw-qb1 / lnk_4Tr9Bd\nFirst opened: 2026-03-03 14:15 (the run that saw the click; the service gives no click time)\nNext: no new message now. Our last email is under 24 hours old (about 4 hours), so the AI agent waits for Pete's answer (05-follow-ups-and-stop.md)."
+        },
+        {
+          "created_at": "2026-03-04T13:10:00Z",
+          "body": "**2026-03-04 08:10 · AI agent · reply**\nFrom: pete.ostrander@northwindmech.example\nSubject: Re: dispatch for your crews\nThread: Smartlead campaign \"US-HVAC-2026-03\", lead answered 2026-03-04\n\n> Hi Sam,\n>\n> I read the one-pager. We have 3 dispatchers. I decide together with our controller. Can we talk?\n>\n> Pete"
+        },
+        {
+          "created_at": "2026-03-04T13:20:00Z",
+          "body": "**2026-03-04 08:20 · AI agent · found-out**\nCustomer check (CRM, by domain): not a customer (checked again before writing)\nOur person in the thread (CRM, mailbox, calendar, card): none found (checked again before writing)\nBooking on the calendar: none\nCompany (Apollo): 41 employees, 30 technicians, 3 dispatchers\nVerdict: fits, and all three qualification answers are on the card. Fit: 30 technicians, 3 dispatchers, QuickBooks Online. Task: the bookkeeper re-keys completed jobs. Decision maker: Pete and the controller (name not given). The booking link goes in the next email, which waits for the sending hours in Minneapolis (09:00 Central, 10:00 Eastern)."
+        },
+        {
+          "created_at": "2026-03-04T13:35:00Z",
+          "body": "**2026-03-04 08:35 · AI agent · draft**\nTo: pete.ostrander@northwindmech.example\nSubject: Re: dispatch for your crews\nWaits for: Sam Okafor (stage 1)\nMaterial: none\n\n> Hi Pete,\n>\n> Thanks. Three dispatchers on Fleet, with your controller on the call, is a good group for it. Dana Reyes runs the call and can walk through the QuickBooks sync.\n>\n> Pick a time that works for both of you: https://calendly.com/northstar-dispatch/intro-call\n>\n> Sam"
+        },
+        {
+          "created_at": "2026-03-04T15:12:00Z",
+          "body": "approved",
+          "user": {
+            "login": "sokafor-ns"
+          }
+        },
+        {
+          "created_at": "2026-03-04T15:13:00Z",
+          "body": "**2026-03-04 10:13 · AI agent · sent**\nFrom: sam.okafor@getnorthstar.example\nTo: pete.ostrander@northwindmech.example\nSubject: Re: dispatch for your crews\nApproved by: Sam Okafor, 2026-03-04 10:12\nFollow-up due: 2026-03-07\nMaterial: none\n\n> Hi Pete,\n>\n> Thanks. Three dispatchers on Fleet, with your controller on the call, is a good group for it. Dana Reyes runs the call and can walk through the QuickBooks sync.\n>\n> Pick a time that works for both of you: https://calendly.com/northstar-dispatch/intro-call\n>\n> Sam"
+        },
+        {
+          "created_at": "2026-03-04T16:45:00Z",
+          "body": "**2026-03-04 11:45 · AI agent · booking**\nMeeting: 2026-03-09 10:00 (America/Chicago, which is 11:00 Eastern), 30 minutes, with Dana Reyes\nInvitee: pete.ostrander@northwindmech.example\nMatched by: email\nCreated after the AI agent's first email to this company: yes (booking created 2026-03-04 11:40, first sent 2026-03-03)\nQualification answers: fit: 30 technicians, 3 dispatchers, QuickBooks Online; task: the bookkeeper re-keys completed jobs; decision maker: Pete and the controller"
+        },
+        {
+          "created_at": "2026-03-04T16:47:00Z",
+          "body": "**2026-03-04 11:47 · AI agent · handover**\nTo: Dana Reyes\nNeeds: host the intro call on 2026-03-09 at 10:00 America/Chicago. Read the card first: 30 technicians, 3 dispatchers, QuickBooks Online, the bookkeeper re-keys completed jobs for two days a month, Pete and the controller decide together. The AI agent told Pete that sync is part of Fleet and that Fleet is $149 per dispatcher per month with unlimited technicians. Pete read the one-pager.\nBecause: a booked call is a person's work. Follow-ups are stopped and the AI agent sends nothing more to this company. Label set to Booked.\nLead's last message: Pete Ostrander, 2026-03-04 08:10: \"I read the one-pager. We have 3 dispatchers. I decide together with our controller. Can we talk?\""
+        },
+        {
+          "created_at": "2026-03-09T15:45:00Z",
+          "body": "**2026-03-09 11:45 · Dana Reyes · note**\nCall with Pete and the controller. 30 technicians, 3 dispatchers, QuickBooks Online. They want to start the 14-day trial on 2026-03-10 with one dispatcher. The controller wants to see a QuickBooks Online invoice created from a completed job before the other two dispatchers join. I told them QuickBooks sync is in Fleet, which is the plan that fits. Next call with Pete: 2026-03-16 at 10:00 America/Chicago, booked."
+        },
+        {
+          "created_at": "2026-03-09T15:50:00Z",
+          "body": "**2026-03-09 11:50 · AI agent · call-held**\nConfirmed by: calendar (the event of 2026-03-09 10:00 America/Chicago ended, was not cancelled and was not marked as a no-show)\nWhat happened: Dana spoke with Pete and the controller. They start the 14-day trial on 2026-03-10 with one dispatcher, and the controller wants to see a QuickBooks Online invoice created from a completed job first (Dana's note of 2026-03-09 11:45). Label set to Call held.\nNext step: Dana holds the next call with Pete on 2026-03-16 at 10:00 America/Chicago"
+        },
+        {
+          "created_at": "2026-03-09T15:51:00Z",
+          "body": "**2026-03-09 11:51 · AI agent · next-step**\nDo: on each run, look for the trial sign-up from northwindmech.example and write it on the card when it lands. Send no emails to this company\nOn: none\nOwner: AI agent\nWhy: the next step belongs to Dana: her call with Pete on 2026-03-16."
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Prairie Comfort Heating (prairiecomfort.example)",
+      "state": "open",
+      "labels": [
+        "Parked"
+      ],
+      "url": "https://github.com/example-owner/ai-sdr-starter/issues/6",
+      "body": "| Field | Value |\n|---|---|\n| Company | Prairie Comfort Heating |\n| Domain | prairiecomfort.example |\n| Contacts | Janelle Brandt, janelle@prairiecomfort.example, Owner |\n| Size | 25 technicians (their site; Apollo says 31 employees) |\n| Industry | Heating and HVAC |\n| Country | Canada (Regina, SK) |\n| Source | Campaign CA-HEATING-2026-03 (Smartlead), step 1 sent 2026-03-02 |\n| CRM record | https://app.hubspot.com/contacts/10000001/company/20437 |\n| Setup | 1 |\n\n---\n\n**2026-03-04 12:15 · AI agent · reply**\nFrom: janelle@prairiecomfort.example\nSubject: Re: dispatch for your heating crews\nThread: Smartlead campaign \"CA-HEATING-2026-03\", step 1 sent 2026-03-02 10:20\n\n> Hi Sam,\n>\n> Not now. We renewed our dispatch software in February and the contract runs through the end of May. Write me again in June.\n>\n> Janelle",
+      "comments": [
+        {
+          "created_at": "2026-03-04T17:22:00Z",
+          "body": "**2026-03-04 12:22 · AI agent · found-out**\nCustomer check (CRM, by domain): not a customer, no closed-won deal. No HubSpot record, so the lead was created (linked in the header)\nOur person in the thread (CRM, mailbox, calendar, card): none found (none in the last 90 days, no person's note on this card)\nBooking on the calendar: none\nCompany (Apollo): 31 employees, 25 technicians on their site, heating and HVAC, Regina, SK, Canada\nVerdict: fits (25 technicians, above the floor of 15). This is \"not now\" with a reason and a month, so the card is parked (01-what-to-answer.md). The date is the first working day of June: 2026-06-01."
+        },
+        {
+          "created_at": "2026-03-04T17:30:00Z",
+          "body": "**2026-03-04 12:30 · AI agent · draft**\nTo: janelle@prairiecomfort.example\nSubject: Re: dispatch for your heating crews\nWaits for: Sam Okafor (stage 1)\nMaterial: none\n\n> Hi Janelle,\n>\n> Understood. I will write to you again on 2026-06-01, after your contract ends. You do not need to do anything before then.\n>\n> If you want to look at prices in the meantime, they are public: https://northstardispatch.example/pricing\n>\n> Sam"
+        },
+        {
+          "created_at": "2026-03-04T18:02:00Z",
+          "body": "approved",
+          "user": {
+            "login": "sokafor-ns"
+          }
+        },
+        {
+          "created_at": "2026-03-04T18:03:00Z",
+          "body": "**2026-03-04 13:03 · AI agent · sent**\nFrom: sam.okafor@getnorthstar.example\nTo: janelle@prairiecomfort.example\nSubject: Re: dispatch for your heating crews\nApproved by: Sam Okafor, 2026-03-04 13:02\nFollow-up due: none\nMaterial: none\n\n> Hi Janelle,\n>\n> Understood. I will write to you again on 2026-06-01, after your contract ends. You do not need to do anything before then.\n>\n> If you want to look at prices in the meantime, they are public: https://northstardispatch.example/pricing\n>\n> Sam"
+        },
+        {
+          "created_at": "2026-03-04T18:04:00Z",
+          "body": "**2026-03-04 13:04 · AI agent · next-step**\nDo: run the checks again (customer, our person, booking), then write one email with something new\nOn: 2026-06-01\nOwner: AI agent\nWhy: the current dispatch software contract runs through the end of May 2026. Label set to Parked. Follow-ups are stopped until the date. Janelle was removed from the Smartlead campaign."
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Cedar Valley Services (cedarvalleyservices.example)",
+      "state": "closed",
+      "labels": [
+        "No fit"
+      ],
+      "url": "https://github.com/example-owner/ai-sdr-starter/issues/7",
+      "body": "| Field | Value |\n|---|---|\n| Company | Cedar Valley Services |\n| Domain | cedarvalleyservices.example |\n| Contacts | Bill Hartnett, bill@cedarvalleyservices.example, Owner |\n| Size | 9 technicians (Bill and their site) |\n| Industry | Appliance and HVAC repair |\n| Country | United States (Cedar Rapids, IA) |\n| Source | Campaign US-HVAC-2026-03 (Smartlead), step 1 sent 2026-03-04 |\n| CRM record | https://app.hubspot.com/contacts/10000001/company/20502 |\n| Setup | 1 |\n\n---\n\n**2026-03-05 15:02 · AI agent · reply**\nFrom: bill@cedarvalleyservices.example\nSubject: Re: dispatch for your crews\nThread: Smartlead campaign \"US-HVAC-2026-03\", step 1 sent 2026-03-04 10:15\n\n> Hi Sam,\n>\n> Looks interesting. It is me, my wife and nine techs. What does it cost?\n>\n> Bill",
+      "comments": [
+        {
+          "created_at": "2026-03-05T20:09:00Z",
+          "body": "**2026-03-05 15:09 · AI agent · found-out**\nCustomer check (CRM, by domain): not a customer, no closed-won deal. No HubSpot record, so the lead was created (linked in the header)\nOur person in the thread (CRM, mailbox, calendar, card): none found (none in the last 90 days, no person's note on this card)\nBooking on the calendar: none\nCompany (Apollo): 11 employees, 9 technicians (Bill and their site agree), appliance and HVAC repair, Cedar Rapids, IA, United States\nVerdict: no fit. Nine technicians is below the floor of 15 (size_floor in settings.yml). Label set to No fit. By 03-icp-and-qualification.md there is no call and there are no follow-ups. Bill wrote to us, so he gets one short reply with the public pricing page and the trial."
+        },
+        {
+          "created_at": "2026-03-05T20:15:00Z",
+          "body": "**2026-03-05 15:15 · AI agent · draft**\nTo: bill@cedarvalleyservices.example\nSubject: Re: dispatch for your crews\nWaits for: Sam Okafor (stage 1)\nMaterial: none\n\n> Hi Bill,\n>\n> With nine technicians, Crew is the plan that fits: $59 per dispatcher per month, up to 10 technicians. The trial is 14 days and needs no card. Prices are here: https://northstardispatch.example/pricing\n>\n> You do not need a call for this size. If you try it, tell me how many dispatchers you would use and I will confirm the price.\n>\n> Sam"
+        },
+        {
+          "created_at": "2026-03-05T20:40:00Z",
+          "body": "approved",
+          "user": {
+            "login": "sokafor-ns"
+          }
+        },
+        {
+          "created_at": "2026-03-05T20:41:00Z",
+          "body": "**2026-03-05 15:41 · AI agent · sent**\nFrom: sam.okafor@getnorthstar.example\nTo: bill@cedarvalleyservices.example\nSubject: Re: dispatch for your crews\nApproved by: Sam Okafor, 2026-03-05 15:40\nFollow-up due: none\nMaterial: none\n\n> Hi Bill,\n>\n> With nine technicians, Crew is the plan that fits: $59 per dispatcher per month, up to 10 technicians. The trial is 14 days and needs no card. Prices are here: https://northstardispatch.example/pricing\n>\n> You do not need a call for this size. If you try it, tell me how many dispatchers you would use and I will confirm the price.\n>\n> Sam"
+        },
+        {
+          "created_at": "2026-03-05T20:42:00Z",
+          "body": "**2026-03-05 15:42 · AI agent · next-step**\nDo: nothing. The card is closed as No fit and there are no follow-ups\nOn: none\nOwner: AI agent\nWhy: 9 technicians, below the floor of 15. Bill was removed from the Smartlead campaign. If he writes again, a new run reads this card first and answers only the question he asks."
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Granite State Electric (granitestateelectric.example)",
+      "state": "open",
+      "labels": [
+        "Do not write"
+      ],
+      "url": "https://github.com/example-owner/ai-sdr-starter/issues/8",
+      "body": "| Field | Value |\n|---|---|\n| Company | Granite State Electric |\n| Domain | granitestateelectric.example |\n| Contacts | Lisa Moreau, lisa.moreau@granitestateelectric.example, Operations Manager |\n| Size | 55 technicians (their site; Apollo says 71 employees) |\n| Industry | Electrical |\n| Country | United States (Manchester, NH) |\n| Source | Campaign US-ELECTRIC-2026-03 (Smartlead), step 1 sent 2026-03-02 |\n| CRM record | https://app.hubspot.com/contacts/10000001/company/20466 |\n| Setup | 1 |\n\n---\n\n**2026-03-05 09:12 · AI agent · reply**\nFrom: lisa.moreau@granitestateelectric.example\nSubject: Re: dispatch for your electrical crews\nThread: Smartlead campaign \"US-ELECTRIC-2026-03\", step 1 sent 2026-03-02 10:25\n\n> Hi Sam,\n>\n> Thanks for the note. Not sure it is for us yet, but happy to hear more. What does it cost?\n>\n> Lisa",
+      "comments": [
+        {
+          "created_at": "2026-03-05T14:14:00Z",
+          "body": "**2026-03-05 09:14 · AI agent · found-out**\nCustomer check (CRM, by domain): not a customer, no closed-won deal. No HubSpot record, so the lead was created (linked in the header)\nOur person in the thread (CRM, mailbox, calendar, card): none found (no open deal, no email from Dana or Sam to the domain in the last 90 days)\nBooking on the calendar: none\nCompany (Apollo): 71 employees, 55 technicians on their site, electrical, Manchester, NH, United States\nVerdict: fits (55 technicians, above the floor of 15). Price question. The draft is next."
+        },
+        {
+          "created_at": "2026-03-05T14:30:00Z",
+          "body": "**2026-03-05 09:30 · Priya Natarajan · note**\nGranite State Electric is a partner relationship. Their owner and I talk every month, and I will answer Lisa myself. Label set to Do not write. Do not email this company."
+        },
+        {
+          "created_at": "2026-03-05T14:40:00Z",
+          "body": "**2026-03-05 09:40 · AI agent · next-step**\nDo: write nothing to this company until a person removes the label \"Do not write\"\nOn: none\nOwner: AI agent\nWhy: the label was set by Priya Natarajan at 09:30, and 06-hard-rules.md says the AI agent sends nothing to a company with that label. No draft was written. The price question from Lisa is unanswered on purpose. Lisa was removed from the Smartlead campaign, so no sequence step goes out."
+        },
+        {
+          "created_at": "2026-03-05T14:41:00Z",
+          "body": "**2026-03-05 09:41 · AI agent · handover**\nTo: Priya Natarajan\nNeeds: answer Lisa's price question yourself\nBecause: the label \"Do not write\" is on, so the AI agent may not answer\nLead's last message: Lisa Moreau, 2026-03-05 09:12: \"What does it cost?\""
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Gulf Coast Cooling (gulfcoastcooling.example)",
+      "state": "open",
+      "labels": [
+        "Our person is in the thread"
+      ],
+      "url": "https://github.com/example-owner/ai-sdr-starter/issues/9",
+      "body": "| Field | Value |\n|---|---|\n| Company | Gulf Coast Cooling |\n| Domain | gulfcoastcooling.example |\n| Contacts | Denise Whitfield, denise.whitfield@gulfcoastcooling.example, Office Manager<br>Rick Tomlin, rick.tomlin@gulfcoastcooling.example, Owner |\n| Size | 80 technicians (their site; Apollo says 96 employees) |\n| Industry | HVAC |\n| Country | United States (Tampa, FL) |\n| Source | Campaign US-HVAC-2026-03 (Smartlead), step 1 sent 2026-03-02 |\n| CRM record | https://app.hubspot.com/contacts/10000001/company/20431 |\n| Setup | 1 |\n\n---\n\n**2026-03-10 13:44 · AI agent · reply**\nFrom: denise.whitfield@gulfcoastcooling.example\nSubject: Re: dispatch for your HVAC crews\nThread: Smartlead campaign \"US-HVAC-2026-03\", step 1 sent 2026-03-02 10:30\n\n> Hi Sam,\n>\n> Rick asked me to get the details after his call with Dana last week. Can you send the pricing and the QuickBooks information? Thanks.\n>\n> Denise",
+      "comments": [
+        {
+          "created_at": "2026-03-10T17:49:00Z",
+          "body": "**2026-03-10 13:49 · AI agent · found-out**\nCustomer check (CRM, by domain): not a customer yet. HubSpot has an open deal \"Gulf Coast Cooling - Fleet\", owner Dana Reyes, stage \"Meeting held\" (hit 1)\nOur person in the thread (CRM, mailbox, calendar, card): hit. The writer is Denise, but the match is by domain, not by address. Hit 2: Dana's mailbox shows an email from Dana to rick.tomlin@gulfcoastcooling.example on 2026-03-06 15:20, subject \"Following up on our call\": \"Rick, thanks for the time today. I will send the Fleet details and a QuickBooks overview.\" Hit 3: Calendly shows Dana's call with Rick on 2026-03-06. None of these emails came from the AI agent\nBooking on the calendar: Dana's call with Rick on 2026-03-06 was booked on 2026-02-27, before the first email of this sequence on 2026-03-02, so it is not a booking made by this sequence\nCompany (Apollo): 96 employees, 80 technicians on their site, HVAC, Tampa, FL, United States\nVerdict: our person is in the thread. Dana is talking to this company. Set the label \"Our person is in the thread\" and write nothing."
+        },
+        {
+          "created_at": "2026-03-10T17:51:00Z",
+          "body": "**2026-03-10 13:51 · AI agent · handover**\nTo: Dana Reyes\nNeeds: answer Denise's request for pricing and QuickBooks information, from the thread you already have with Rick\nBecause: our person is already talking to this company, so the AI agent sends no draft and no follow-up, now or later. Denise was removed from the Smartlead campaign. If the reply is still unanswered after one working day, the daily check raises an alarm naming Dana.\nLead's last message: Denise Whitfield, 2026-03-10 13:44: \"Can you send the pricing and the QuickBooks information?\""
+        }
+      ]
+    }
+  ]
+}

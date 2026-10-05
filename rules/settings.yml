@@ -1,0 +1,29 @@
+# Step 1 of the guide: the small settings, one line each.
+# The AI agent and the scripts in scripts/ read this file on every run.
+# Fill in your own values. The template ships with empty or placeholder values on purpose.
+setup: 1                 # 1 you run outbound, 2 no outbound yet (explee), 3 leads come in on their own; two may run at once: [1, 3]
+engine: B                # A server on a timer, B Claude Code on your computer, C scripts on a schedule
+approval:
+  stage: 1               # 1 you approve every email, 2 routine replies go out and unsure ones wait, 3 no approvals
+  approver: ""           # who approves at stage 1 and reads the waiting list at stage 2
+  waiting_list_answerer: ""
+  call_host: ""
+  switch_owner: ""
+language: en             # the AI agent keeps the lead's language in the thread; this is the default
+tone: ""                 # one line, e.g. "plain, direct, no exclamation marks"
+email:
+  max_words: 0
+  follow_ups: 0          # how many emails in a row with no reply before the AI agent stops; the first email counts, so 3 is the first email and 2 follow-ups
+  follow_up_days: []     # days after the previous email, e.g. [3, 7, 14]
+  sending_days: []       # e.g. [Mon, Tue, Wed, Thu, Fri]
+  sending_hours: ""      # e.g. "09:00-17:00"
+  timezone: ""           # e.g. America/New_York
+  booking_link: ""
+  daily_cap: 0           # emails the AI agent may send per day, all threads together
+icp:
+  size_floor: 0          # employees or technicians; below it the card closes as "No fit"
+launch:                  # setup 1 only
+  new_contacts_per_week: 0
+  emails_per_mailbox_per_day: 0
+  pause_at_bounce_rate: 0.0   # the AI agent pauses the campaign and tells you
+sending_flag_file: SENDING_ON   # while this file exists next to CLAUDE.md, sending is on

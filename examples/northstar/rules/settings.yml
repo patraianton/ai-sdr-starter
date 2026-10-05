@@ -1,0 +1,27 @@
+# Step 1 of the guide. Northstar Dispatch, filled with real values.
+setup: [1, 3]            # outbound plus trial sign-ups, both through the same AI agent
+engine: B                # Claude Code on Sam's computer, /loop 10m
+approval:
+  stage: 1               # Sam approves every email
+  approver: "Sam Okafor"
+  waiting_list_answerer: "Sam Okafor"
+  call_host: "Dana Reyes"
+  switch_owner: "Priya Natarajan"
+language: en
+tone: "plain, direct, no exclamation marks, no filler"
+email:
+  max_words: 120
+  follow_ups: 3          # 3 unanswered emails in a row, the first email counts
+  follow_up_days: [3, 7]         # follow_ups 3 = the first email plus 2 follow-ups, so two gaps
+  sending_days: [Mon, Tue, Wed, Thu, Fri]
+  sending_hours: "09:00-17:00"   # in the lead's own time zone when the state or province is known
+  timezone: America/New_York     # default when it is not known; times on the cards are Eastern
+  booking_link: "https://calendly.com/northstar-dispatch/intro-call"
+  daily_cap: 40
+icp:
+  size_floor: 15
+launch:
+  new_contacts_per_week: 150
+  emails_per_mailbox_per_day: 25
+  pause_at_bounce_rate: 0.03
+sending_flag_file: SENDING_ON

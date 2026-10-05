@@ -1,0 +1,40 @@
+{
+  "_about": "CRM look-ups by domain, in the shape crm.mjs returns (HubSpot or Pipedrive). A domain that is missing here is not in the CRM.",
+  "companies": {
+    "lonestarelectric.example": {
+      "id": "20610",
+      "name": "Lone Star Electric",
+      "is_customer": true,
+      "open_deals": []
+    },
+    "gulfcoastcooling.example": {
+      "id": "20431",
+      "name": "Gulf Coast Cooling",
+      "is_customer": false,
+      "open_deals": [
+        {
+          "name": "Gulf Coast Cooling - Fleet",
+          "stage": "Meeting held"
+        }
+      ]
+    },
+    "northwindmech.example": {
+      "id": "20390",
+      "name": "Northwind Mechanical",
+      "is_customer": false,
+      "open_deals": []
+    },
+    "blueridgehvac.example": {
+      "id": "20481",
+      "name": "Blue Ridge HVAC",
+      "is_customer": false,
+      "open_deals": []
+    },
+    "sunbeltrepair.example": {
+      "id": "20455",
+      "name": "Sunbelt Appliance Repair",
+      "is_customer": false,
+      "open_deals": []
+    }
+  }
+}

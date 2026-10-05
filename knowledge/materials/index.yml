@@ -1,0 +1,11 @@
+# Step 1 of the guide, product knowledge: the list of materials the AI agent picks from.
+# One entry per case study or one-pager. Remove the leading "# " of an entry to turn it on.
+# Fields: id (short, no spaces), title, audience (an industry or a system, several separated by commas), url (full address).
+# The AI agent only sends pieces that are listed here. See knowledge/materials/README.md.
+#
+# Example entry, shown commented out:
+#
+# - id: hvac-case-study
+#   title: "How a 40 technician HVAC company cut missed appointments"
+#   audience: "HVAC"
+#   url: "https://your-company.example/case-studies/hvac"

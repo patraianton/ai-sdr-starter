@@ -1,0 +1,10 @@
+# Step 3 of the guide, way C. Install with: crontab -e (as the user that owns the folder).
+# Change /home/sdr/ai-sdr to the folder where you cloned your copy of the template.
+#
+# The sign-up flow: no model inside, every 2 hours, at minute 5.
+# A dry run is a practice run: it reads sample data and changes nothing. The line below starts as a dry run.
+# Change DRY_RUN=1 to DRY_RUN=0 after you have read the first output. Then it writes and sends.
+5 */2 * * * cd /home/sdr/ai-sdr && DRY_RUN=1 node engine/way-c-scripts/signup-flow.mjs >> runs/signup-flow.log 2>&1
+
+# The daily check (step 6), once a day at 07:15. Change DRY_RUN=1 to DRY_RUN=0 after you have read the first output.
+15 7 * * * cd /home/sdr/ai-sdr && DRY_RUN=1 node scripts/daily-check.mjs >> runs/daily-check.log 2>&1

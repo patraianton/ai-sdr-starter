@@ -1,0 +1,53 @@
+{
+  "_about": "Company look-ups by domain, in the shape apollo.mjs returns. A domain that is missing here is a company Apollo does not know. \"employees\" is null when Apollo gives no size.",
+  "organizations": {
+    "summitcomfort.example": {
+      "name": "Summit Comfort Air",
+      "employees": 48,
+      "industry": "HVAC",
+      "country": "United States"
+    },
+    "tidewaterplumbing.example": {
+      "name": "Tidewater Plumbing",
+      "employees": 8,
+      "industry": "Plumbing",
+      "country": "United States"
+    },
+    "lonestarelectric.example": {
+      "name": "Lone Star Electric",
+      "employees": 140,
+      "industry": "Electrical",
+      "country": "United States"
+    },
+    "pinecrestmech.example": {
+      "name": "Pinecrest Mechanical",
+      "employees": null,
+      "industry": "Mechanical contractor",
+      "country": "United States"
+    },
+    "gulfcoastcooling.example": {
+      "name": "Gulf Coast Cooling",
+      "employees": 96,
+      "industry": "HVAC",
+      "country": "United States"
+    },
+    "northwindmech.example": {
+      "name": "Northwind Mechanical",
+      "employees": 41,
+      "industry": "Mechanical contractor",
+      "country": "United States"
+    },
+    "blueridgehvac.example": {
+      "name": "Blue Ridge HVAC",
+      "employees": 58,
+      "industry": "HVAC",
+      "country": "United States"
+    },
+    "sunbeltrepair.example": {
+      "name": "Sunbelt Appliance Repair",
+      "employees": 140,
+      "industry": "Appliance repair",
+      "country": "United States"
+    }
+  }
+}

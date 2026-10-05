@@ -1,0 +1,11 @@
+# Step 3 of the guide, way A. Install with: crontab -e (as the user that owns the folder, not root).
+# Change /home/sdr/ai-sdr to the folder where you cloned your copy of the template.
+#
+# The AI agent: one clean run every 10 minutes. Ten minutes is an example, the interval is yours.
+# If a run is still going when the next start comes, the next start is skipped.
+*/10 * * * * /home/sdr/ai-sdr/engine/way-a-server/run-agent.sh >> /home/sdr/ai-sdr/runs/cron.log 2>&1
+
+# The daily check (step 6): no model inside, once a day, 07:15 server time.
+# A dry run is a practice run: it reads sample data and changes nothing. The line below starts as a dry run.
+# Change DRY_RUN=1 to DRY_RUN=0 after you have read the first output.
+15 7 * * * cd /home/sdr/ai-sdr && DRY_RUN=1 node scripts/daily-check.mjs >> runs/daily-check.log 2>&1

@@ -1,0 +1,2 @@
+# Step 2 of the guide: cards are made by the AI agent or from the lead-card template, never as blank issues.
+blank_issues_enabled: false

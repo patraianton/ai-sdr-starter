@@ -1,0 +1,17 @@
+{
+  "_about": "Short.io answers for a dry run: the link a create call returns, and the click counts for known links, keyed by the idString on the cards. Short.io gives totals, not click times, so firstClickAt is null.",
+  "created": {
+    "id": "lnk_dry_run",
+    "short_url": "https://go.northstardispatch.example/dry-run"
+  },
+  "clicks": {
+    "lnk_7Hq2Xm": {
+      "clicks": 1,
+      "firstClickAt": null
+    },
+    "lnk_4Tr9Bd": {
+      "clicks": 1,
+      "firstClickAt": null
+    }
+  }
+}
