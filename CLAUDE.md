@@ -54,7 +54,7 @@ One file, `SENDING_ON`, next to this file. While it exists, sending is on. If it
 
 One GitHub issue per company. The title is `<Company> (<domain>)`. The status is a label, and the nine labels are in `board/labels.yml`:
 
-`New reply`, `Draft ready`, `Sent, waiting`, `Booked`, `Call held`, `Parked`, `No fit`, `Do not write`, `Our person is in the thread`
+`New reply`, `Draft ready`, `Sent and waiting`, `Booked`, `Call held`, `Parked`, `No fit`, `Do not write`, `Our person is in the thread`
 
 - You move a card along the funnel with the first seven. A person sets `Do not write`. A person sets `Our person is in the thread`, and you set it too when you see a colleague's message.
 - Before you create a card, search the cards, open and closed, by company domain. A second person from the same company becomes a note on the existing card. If the card is closed (for example `No fit`), reopen it when the company writes again.

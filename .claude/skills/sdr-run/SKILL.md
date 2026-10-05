@@ -40,7 +40,7 @@ Also pull:
 - New bookings since the last run, from the calendar (`connections/calendly.md`).
 - Clicks on every short link you made, from the short link service (`connections/shortio.md`). Take each link's `idString` from the `Material:` line of the `sent` notes on the cards.
 - Cards labeled "Parked" whose latest `next-step` note has `On:` today or earlier.
-- Cards labeled "Sent, waiting" whose follow-up is due: count your `sent` notes since the last `reply` note on the card; if that count is below `email.follow_ups`, the next follow-up is due `email.follow_up_days[count - 1]` days after the last `sent` note.
+- Cards labeled "Sent and waiting" whose follow-up is due: count your `sent` notes since the last `reply` note on the card; if that count is below `email.follow_ups`, the next follow-up is due `email.follow_up_days[count - 1]` days after the last `sent` note.
 - Cards labeled "Draft ready" (see section 5).
 
 If any read fails (an error, a login that was refused, a timeout), do not carry on as if nothing was new. Write an `alarm` line to `alarms/<date>.md` naming the connection, finish the parts that do not need it, and say in your last message that the read failed. A run that says "done" with a failed read is the failure this guide warns about.
@@ -92,7 +92,7 @@ Before an email goes out, all of these must be true. If one is false, it does no
 4. The emails sent today, all threads together, are below `email.daily_cap`. Count your `sent` notes dated today.
 5. The email passes every line of `rules/06-hard-rules.md` and is at most `email.max_words` words.
 
-Send through the connection of the setup (`connections/smartlead.md`, `explee.md` or `mailbox.md`), in the same thread. **Immediately after the send, before anything else, write the `sent` note with the email exactly as sent**, then set "Sent, waiting", then log the touch in the CRM. If the note cannot be written, retry. If it still fails, stop the whole run, write an `alarm` line to `alarms/<date>.md` and tell the person in the window: an email that is not on a card did not happen as far as the board knows.
+Send through the connection of the setup (`connections/smartlead.md`, `explee.md` or `mailbox.md`), in the same thread. **Immediately after the send, before anything else, write the `sent` note with the email exactly as sent**, then set "Sent and waiting", then log the touch in the CRM. If the note cannot be written, retry. If it still fails, stop the whole run, write an `alarm` line to `alarms/<date>.md` and tell the person in the window: an email that is not on a card did not happen as far as the board knows.
 
 ## 6. Stop conditions
 

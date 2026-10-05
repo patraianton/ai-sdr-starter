@@ -213,7 +213,7 @@ test('examples/northstar/rules/settings.yml (the filled example) parses, has the
 // The labels
 // ---------------------------------------------------------------------------
 
-const LABEL_NAMES = ['New reply', 'Draft ready', 'Sent, waiting', 'Booked', 'Call held', 'Parked', 'No fit', 'Do not write', 'Our person is in the thread'];
+const LABEL_NAMES = ['New reply', 'Draft ready', 'Sent and waiting', 'Booked', 'Call held', 'Parked', 'No fit', 'Do not write', 'Our person is in the thread'];
 
 test('board/labels.yml: the nine labels, in order, with colour and description', () => {
   const labels = readYamlFile(path.join(ROOT, 'board', 'labels.yml'));
@@ -239,7 +239,7 @@ test('board-labels: the plan creates what is missing, updates what differs, keep
 
 test('the label names used in the code are the labels in the file', () => {
   const names = readYamlFile(path.join(ROOT, 'board', 'labels.yml')).map((label) => label.name);
-  for (const used of ['Draft ready', 'Our person is in the thread', 'Call held', 'Booked', 'Sent, waiting', 'New reply', 'No fit', 'Do not write', 'Parked']) {
+  for (const used of ['Draft ready', 'Our person is in the thread', 'Call held', 'Booked', 'Sent and waiting', 'New reply', 'No fit', 'Do not write', 'Parked']) {
     assert.ok(names.includes(used), `${used} is in labels.yml`);
   }
 });
@@ -597,7 +597,7 @@ function wayCCard(sentAt) {
   const header = '| Field | Value |\n|---|---|\n| Company | Summit Comfort Air |\n| Domain | summitcomfort.example |\n| Contacts | Pat Morrow, pat.morrow@summitcomfort.example, (title not given) |\n| Source | Trial sign-up 2026-03-02 (feed) |\n| Setup | 3 |';
   const notes = sentAt.map(([date, time]) => `**${date} ${time} \u00b7 AI agent \u00b7 sent**\nTo: pat.morrow@summitcomfort.example\nSubject: Your trial\n\nHi`);
   const [first, ...rest] = notes.length ? notes : ['**2026-03-02 10:00 \u00b7 AI agent \u00b7 found-out**\nVerdict: fits. First email next.'];
-  return parseCard({ number: 20, title: 'Summit Comfort Air (summitcomfort.example)', state: 'open', labels: ['Sent, waiting'], url: 'u', body: `${header}\n\n---\n\n${first}`, comments: rest.map((body) => ({ body, created_at: '2026-03-05T00:00:00Z' })) }, TZ);
+  return parseCard({ number: 20, title: 'Summit Comfort Air (summitcomfort.example)', state: 'open', labels: ['Sent and waiting'], url: 'u', body: `${header}\n\n---\n\n${first}`, comments: rest.map((body) => ({ body, created_at: '2026-03-05T00:00:00Z' })) }, TZ);
 }
 
 test('sign-up flow: follow-ups come on the fixed days, then the sequence ends', () => {
@@ -651,7 +651,7 @@ test('sign-up flow: a fit sign-up gets the lead created, a found-out note and th
   assert.equal(plan.email.mode, 'send');
   assert.equal(plan.email.template, 'first-email');
   assert.equal(plan.email.to, 'pat.morrow@summitcomfort.example');
-  assert.equal(plan.label, 'Sent, waiting');
+  assert.equal(plan.label, 'Sent and waiting');
   assert.deepEqual(plan.notes.map((note) => note.kind), ['found-out']);
   const lines = plan.notes[0].body.split('\n');
   assert.match(lines[0], /^Trial sign-up received: pat\.morrow@summitcomfort\.example at 2026-03-12 08:05$/);
@@ -834,7 +834,7 @@ test('.env reader: a comment after an empty value is not the value, so a copy of
 
 test('daily check, mailbox (setup 3): newsletters and internal mail raise no alarm, an answer to an AI email does', () => {
   const card = {
-    number: 91, title: 'Mail Co (mailco.example)', state: 'open', labels: ['Sent, waiting'], url: 'https://github.com/example-owner/ai-sdr-starter/issues/91',
+    number: 91, title: 'Mail Co (mailco.example)', state: 'open', labels: ['Sent and waiting'], url: 'https://github.com/example-owner/ai-sdr-starter/issues/91',
     body: '| Field | Value |\n|---|---|\n| Domain | mailco.example |\n| Contacts | Bo Mail, bo@mailco.example, Owner |\n| Setup | 3 |\n\n---\n\n**2026-03-10 10:00 · AI agent · sent**\nFrom: the sales rep mailbox\nTo: bo@mailco.example\nSubject: Dispatch scheduling for Mail Co\nApproved by: template (way C, no approval stage)\nFollow-up due: 2026-03-13\nMaterial: none\nMessage-Id: <sent-1@mail.example>\n\nHello.',
     comments: [],
   };
@@ -993,7 +993,7 @@ test('the sample cards in the example use the nine labels, one each, in the orde
     const front = /^---\n([\s\S]*?)\n---/.exec(fs.readFileSync(path.join(dir, file), 'utf8').replace(/\r\n/g, '\n'))[1];
     return [...front.matchAll(/^\s+-\s+"(.*)"$/gm)].map((m) => m[1]);
   });
-  assert.deepEqual(labels.flat(), ['New reply', 'Draft ready', 'Sent, waiting', 'Booked', 'Call held', 'Parked', 'No fit', 'Do not write', 'Our person is in the thread']);
+  assert.deepEqual(labels.flat(), ['New reply', 'Draft ready', 'Sent and waiting', 'Booked', 'Call held', 'Parked', 'No fit', 'Do not write', 'Our person is in the thread']);
 });
 
 const NOTE_LINES = {

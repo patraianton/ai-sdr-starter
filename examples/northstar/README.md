@@ -32,7 +32,7 @@ Each file is one card. The block at the top (between the two `---` lines) holds 
 |---|---|---|---|
 | `01-blue-ridge-hvac.md` | New reply | 1 | A reply to the outbound sequence, the checks, the HubSpot lead created before the first email, no draft yet. |
 | `02-harbor-plumbing-co.md` | Draft ready | 1 | A draft that answers a price question with the public page and waits for Sam at stage 1. |
-| `03-maple-electric-ltd.md` | Sent, waiting | 1 | A sent email approved by Sam, a link opened, the next message written that run, and the follow-up days. |
+| `03-maple-electric-ltd.md` | Sent and waiting | 1 | A sent email approved by Sam, a link opened, the next message written that run, and the follow-up days. |
 | `04-sunbelt-appliance-repair.md` | Booked | 3 | A trial sign-up, three qualification answers, a booking matched from Calendly and the handover to Dana. |
 | `05-northwind-mechanical.md` | Call held | 1 | A one-pager link opened, a booking, the calendar confirming the call and Dana's note with the next step. |
 | `06-prairie-comfort-heating.md` | Parked | 1 | "Not now" with a reason, and the date the AI agent comes back: 2026-06-01. |

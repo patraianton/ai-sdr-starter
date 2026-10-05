@@ -1,7 +1,7 @@
 ---
 title: "Maple Electric Ltd. (mapleelectric.example)"
 labels:
-  - "Sent, waiting"
+  - "Sent and waiting"
 state: open
 ---
 
@@ -134,4 +134,4 @@ Material: none
 Do: send follow-up 2 on 2026-03-11, and then end the sequence
 On: none
 Owner: AI agent
-Why: follow_up_days is [3, 7], so the gap after this email is 7 days. This is the second email in a row with no reply, and the limit is 3 (the first email counts). Each follow-up adds something new, and a reply, a booking, a refusal or our person in the thread ends the sequence earlier. The checks run again before follow-up 2. Label stays Sent, waiting.
+Why: follow_up_days is [3, 7], so the gap after this email is 7 days. This is the second email in a row with no reply, and the limit is 3 (the first email counts). Each follow-up adds something new, and a reply, a booking, a refusal or our person in the thread ends the sequence earlier. The checks run again before follow-up 2. Label stays Sent and waiting.

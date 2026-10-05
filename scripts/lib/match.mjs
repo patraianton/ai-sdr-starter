@@ -492,7 +492,7 @@ export function callStatus(booking, card, now, tz = 'UTC') {
 // Who a reply is waiting on
 // ---------------------------------------------------------------------------
 
-const NOT_WAITING_A = ['Do not write', 'Our person is in the thread', 'No fit', 'Parked', 'Booked', 'Call held', 'Sent, waiting'];
+const NOT_WAITING_A = ['Do not write', 'Our person is in the thread', 'No fit', 'Parked', 'Booked', 'Call held', 'Sent and waiting'];
 
 // The person a handover note is addressed to: the "To:" line, as board/note-shapes.md writes it ("To: Dana Reyes").
 // An older free-text note that opens with "To Dana Reyes, who hosts ..." is read too.
@@ -523,7 +523,7 @@ const HANDOVER_IS_NOT_A_WAIT = ['No fit', 'Parked', 'Booked', 'Call held'];
 //   A. The label "Draft ready": the approver at stage 1, the answerer of the waiting list at stage 2.
 //   B. The label "Our person is in the thread" and a reply that no AI email and no person's note followed:
 //      it waits on the person the last handover note names.
-//   C. Any other card (label "New reply", "Do not write", "Sent, waiting") whose last handover note is still open:
+//   C. Any other card (label "New reply", "Do not write", "Sent and waiting") whose last handover note is still open:
 //      the AI agent handed a question to a person and nobody has answered. The person is the one on the
 //      handover "To:" line, then approval.waiting_list_answerer, then approval.call_host.
 // "now" is a Date. A person's answer outside the card (an email from the sales rep) is checked by the caller.

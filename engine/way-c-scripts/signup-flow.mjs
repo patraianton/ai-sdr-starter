@@ -90,8 +90,8 @@ Exit codes: 0 ok, 1 an alarm note was written, 3 could not run.`;
 // Edit points
 // ---------------------------------------------------------------------------
 
-const STATUS_LABELS = ['New reply', 'Draft ready', 'Sent, waiting', 'Booked', 'Call held', 'Parked', 'No fit', 'Do not write', 'Our person is in the thread'];
-const FLOW_LABELS = ['New reply', 'Draft ready', 'Sent, waiting'];
+const STATUS_LABELS = ['New reply', 'Draft ready', 'Sent and waiting', 'Booked', 'Call held', 'Parked', 'No fit', 'Do not write', 'Our person is in the thread'];
+const FLOW_LABELS = ['New reply', 'Draft ready', 'Sent and waiting'];
 const PERSON_LOOKBACK_DAYS = 90;
 
 // The local record of every send. The email goes out first and the card note second, and the second step can fail
@@ -450,7 +450,7 @@ export function decide(ctx) {
   const draftExists = Boolean(pendingDraft && (!lastSentAt || pendingDraft.at > lastSentAt) && pendingDraft.body.includes(`Subject: ${subject}`));
   if (mode === 'draft' && draftExists) mode = 'wait';
   plan.email = { template: name, to: contact.email, subject, body, mode, why };
-  if (mode === 'send') plan.label = 'Sent, waiting';
+  if (mode === 'send') plan.label = 'Sent and waiting';
   else if (mode === 'draft') plan.label = 'Draft ready';
   else if (!card) plan.label = 'New reply';
   return plan;
@@ -564,13 +564,13 @@ async function execute({ plan, ctx, state, dry, card, label }) {
           appendSentLog({ event: 'logged', key, at: now.toISOString(), card: number });
           state.sentLog.set(key, { ...earlier, event: 'logged' });
           if (earlier.event === 'attempt') state.alarms += 1;
-          else sentLabel = 'Sent, waiting';
+          else sentLabel = 'Sent and waiting';
         } catch (error) {
           state.alarms += 1;
           warn(`UNLOGGED SEND: ${email.template} to ${email.to} is in runs/sent-log.jsonl but the card note failed again: ${redact(error.message)}. Write the note on card #${number} by hand.`);
         }
       } else if (earlier.event === 'logged') {
-        sentLabel = 'Sent, waiting';
+        sentLabel = 'Sent and waiting';
       }
     } else if (email.mode === 'send') {
       say(`  ${tag}: SEND ${email.template} to ${email.to} ("${email.subject}")`);
@@ -603,7 +603,7 @@ async function execute({ plan, ctx, state, dry, card, label }) {
       }
       state.sends += 1;
       state.capUsed += 1;
-      sentLabel = 'Sent, waiting';
+      sentLabel = 'Sent and waiting';
     } else if (email.mode === 'draft') {
       say(`  ${tag}: DRAFT ${email.template} for ${email.to}, not sent (${email.why})`);
       const waits = `the owner to create the flag file ${settings.sending_flag_file} (way C has no approval stage)`;

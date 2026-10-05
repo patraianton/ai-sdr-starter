@@ -20,7 +20,7 @@ Step 2 of the guide. Every action on a card is a dated note in one fixed shape. 
 |---|---|---|
 | `found-out` | After the checks and the company lookup | None, or "Our person is in the thread", "No fit" or "Booked" if the check says so |
 | `draft` | When a draft is written and waits | "Draft ready" |
-| `sent` | The moment an email leaves | "Sent, waiting" |
+| `sent` | The moment an email leaves | "Sent and waiting" |
 | `reply` | When a reply is read | "New reply" |
 | `link-opened` | The first time a lead opens a tracked link | None, the next message follows |
 | `booking` | When a booking is matched to the card | "Booked" |

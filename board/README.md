@@ -28,7 +28,7 @@ The second column is the text of `labels.yml`, word for word. The last column ad
 |---|---|---|---|
 | New reply | The card exists or a reply landed. Nothing has been sent yet. | AI agent | |
 | Draft ready | The draft waits on the card for approval. | AI agent | Step 5. Once routine replies go out on their own, this lasts seconds. |
-| Sent, waiting | The email is out. The follow-up sequence runs. | AI agent | |
+| Sent and waiting | The email is out. The follow-up sequence runs. | AI agent | |
 | Booked | The meeting is on the calendar. Follow-ups stop, the sales rep takes over. | AI agent | |
 | Call held | The calendar or the recording confirms the call. | AI agent | The card records what happened and the next step. |
 | Parked | The lead said not now, with a date. The AI agent comes back on that date. | AI agent | |

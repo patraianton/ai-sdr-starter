@@ -84,7 +84,7 @@
       "title": "Maple Electric Ltd. (mapleelectric.example)",
       "state": "open",
       "labels": [
-        "Sent, waiting"
+        "Sent and waiting"
       ],
       "url": "https://github.com/example-owner/ai-sdr-starter/issues/3",
       "body": "| Field | Value |\n|---|---|\n| Company | Maple Electric Ltd. |\n| Domain | mapleelectric.example |\n| Contacts | Grace Tran, grace.tran@mapleelectric.example, Dispatch Manager |\n| Size | 65 technicians (Grace's reply; Apollo says 90 employees) |\n| Industry | Electrical |\n| Country | Canada (Toronto, ON) |\n| Source | Campaign CA-ELECTRIC-2026-03 (Smartlead), step 1 sent 2026-03-02 |\n| CRM record | https://app.hubspot.com/contacts/10000001/company/20412 |\n| Setup | 1 |\n\n---\n\n**2026-03-03 10:18 · AI agent · reply**\nFrom: grace.tran@mapleelectric.example\nSubject: Re: dispatch for electrical crews\nThread: Smartlead campaign \"CA-ELECTRIC-2026-03\", step 1 sent 2026-03-02 10:08\n\n> Hi Sam,\n>\n> We dispatch 65 electricians across the GTA from Google Calendar and it is a mess. Do you have anything for electrical contractors? And how does the QuickBooks part work?\n>\n> Grace",
@@ -129,7 +129,7 @@
         },
         {
           "created_at": "2026-03-04T21:11:00Z",
-          "body": "**2026-03-04 16:11 · AI agent · next-step**\nDo: send follow-up 2 on 2026-03-11, and then end the sequence\nOn: none\nOwner: AI agent\nWhy: follow_up_days is [3, 7], so the gap after this email is 7 days. This is the second email in a row with no reply, and the limit is 3 (the first email counts). Each follow-up adds something new, and a reply, a booking, a refusal or our person in the thread ends the sequence earlier. The checks run again before follow-up 2. Label stays Sent, waiting."
+          "body": "**2026-03-04 16:11 · AI agent · next-step**\nDo: send follow-up 2 on 2026-03-11, and then end the sequence\nOn: none\nOwner: AI agent\nWhy: follow_up_days is [3, 7], so the gap after this email is 7 days. This is the second email in a row with no reply, and the limit is 3 (the first email counts). Each follow-up adds something new, and a reply, a booking, a refusal or our person in the thread ends the sequence earlier. The checks run again before follow-up 2. Label stays Sent and waiting."
         }
       ]
     },

@@ -5,7 +5,7 @@
 - name: "Draft ready"
   color: "FBCA04"
   description: "The draft waits on the card for approval."
-- name: "Sent, waiting"
+- name: "Sent and waiting"
   color: "C5DEF5"
   description: "The email is out. The follow-up sequence runs."
 - name: "Booked"

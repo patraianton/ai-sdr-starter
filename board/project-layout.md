@@ -14,7 +14,7 @@ One column per label, in the order of the funnel:
 
 1. New reply
 2. Draft ready
-3. Sent, waiting
+3. Sent and waiting
 4. Booked
 5. Call held
 6. Parked
