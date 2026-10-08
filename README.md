@@ -1,6 +1,6 @@
 # ai-sdr-starter
 
-A template repository for an AI SDR: the rule files, the product knowledge, the board, the run instruction for three ways of running it, the scripts, the connections list, the approval stages, a daily check with no model inside, the owner report and the launch checklist. The AI agent is Claude Code. The board is GitHub Issues, one card per company. It is for a business owner or an SDR who knows what an SDR does, and a developer is needed once, for a server or a mailbox. This repository is the template that the guide "How to set up an AI SDR" on [apatrai.com](https://apatrai.com) points to. Press "Use this template", keep your copy private, and follow the guide step by step.
+A template repository for an AI SDR: the rule files, the product knowledge, the board, the run instruction for three ways of running it, the scripts, the connections list, the approval stages, a daily check with no model inside, the owner report and the launch checklist. The AI agent is Claude Code. The board is GitHub Issues, one card per company. It is for a business owner or an SDR who knows what an SDR does, and a developer is needed once, for a server or a mailbox. This repository is the template that the guide [How to set up an AI SDR](https://apatrai.com/posts/how-to-set-up-an-ai-sdr) points to. Press "Use this template", keep your copy private, and follow the guide step by step.
 
 ## What is in the box
 
